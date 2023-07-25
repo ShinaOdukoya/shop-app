@@ -2,11 +2,13 @@ package com.myshoppal.ui.activities
 
 import android.app.Dialog
 import android.os.Handler
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
 import com.myshoppal.R
+import com.myshoppal.databinding.ActivityDashboardBinding
 import kotlinx.android.synthetic.main.dialog_progress.*
 
 /**
@@ -14,6 +16,15 @@ import kotlinx.android.synthetic.main.dialog_progress.*
  * It inherits the AppCompatActivity class so in other activity class we will replace the AppCompatActivity with BaseActivity.
  */
 open class BaseActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityDashboardBinding
+    val view = binding.root
+//    override fun setContentView(view: View?) {
+//        super.setContentView(view)
+//        val view = binding.root
+//    }
+
+
 
     // A global variable for double back press feature.
     private var doubleBackToExitPressedOnce = false
@@ -60,6 +71,7 @@ open class BaseActivity : AppCompatActivity() {
         mProgressDialog.setContentView(R.layout.dialog_progress)
 
         mProgressDialog.tv_progress_text.text = text
+//        mProgressDialog.setTitle(text)
 
         mProgressDialog.setCancelable(false)
         mProgressDialog.setCanceledOnTouchOutside(false)

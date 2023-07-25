@@ -5,6 +5,8 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.myshoppal.R
 import com.myshoppal.models.Product
@@ -13,6 +15,9 @@ import com.myshoppal.ui.fragments.ProductsFragment
 import com.myshoppal.utils.Constants
 import com.myshoppal.utils.GlideLoader
 import kotlinx.android.synthetic.main.item_list_layout.view.*
+
+import com.myshoppal.databinding.ActivityProductDetailsBinding
+import com.myshoppal.databinding.ItemListLayoutBinding
 
 /**
  * A adapter class for products list items.
@@ -31,6 +36,7 @@ open class MyProductsListAdapter(
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return MyViewHolder(
+
             LayoutInflater.from(context).inflate(
                 R.layout.item_list_layout,
                 parent,
@@ -58,6 +64,7 @@ open class MyProductsListAdapter(
 
             holder.itemView.tv_item_name.text = model.title
             holder.itemView.tv_item_price.text = "$${model.price}"
+//            holder.itemView.findViewById<>(R.id.text) = "\$${model.price}"
 
             holder.itemView.ib_delete_product.setOnClickListener {
 

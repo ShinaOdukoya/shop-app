@@ -34,10 +34,11 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
     private var mProductImageURL: String = ""
 
 
+    private lateinit var binding: ActivityAddProductBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_product)
-
 
         setupActionBar()
 

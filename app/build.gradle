@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-//apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-parcelize'
 apply plugin: 'com.google.gms.google-services'
 
 //plugins{
@@ -9,13 +9,17 @@ apply plugin: 'com.google.gms.google-services'
 //}
 
 android {
-    compileSdkVersion 34
-    buildToolsVersion "31.0.0"
+    compileSdkVersion 31 //30
+    buildToolsVersion "31.0.0" //31.0.0
+
+    buildFeatures {
+        viewBinding = true
+    }
 
     defaultConfig {
         applicationId "com.myshoppal"
         minSdkVersion 21
-        targetSdkVersion 34
+        targetSdkVersion 31 //30
         versionCode 1
         versionName "1.0"
 
@@ -23,9 +27,9 @@ android {
     }
 
     // Add for using latest experimental build of Android Extensions
-//    androidExtensions {
-//        experimental = true
-//    }
+    androidExtensions {
+        experimental = true
+    }
     //Removed this on 25/07/23
 
     buildTypes {
