@@ -21,15 +21,22 @@
             android:contentDescription="@string/content_description"
             android:scaleType="fitXY"
             android:src="@drawable/auth_screens_background" />
-
-        <ImageView
-            android:layout_width="@dimen/auth_logo_width_size"
-            android:layout_height="@dimen/auth_logo_height_size"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:contentDescription="@string/app_name"
-            android:scaleType="fitCenter"
-            android:src="@drawable/tutorials_eu_logo"
-            app:tint="@color/colorWhite" />
+            android:text="@string/app_name"
+            android:textSize="32sp"
+            android:textColor="@color/colorOffWhite"/>
+
+<!--        <ImageView-->
+<!--            android:layout_width="@dimen/auth_logo_width_size"-->
+<!--            android:layout_height="@dimen/auth_logo_height_size"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:contentDescription="@string/app_name"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/tutorials_eu_logo"-->
+<!--            app:tint="@color/colorWhite" />-->
     </FrameLayout>
 
     <com.myshoppal.utils.MSPTextViewBold

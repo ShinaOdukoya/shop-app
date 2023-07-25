@@ -13,11 +13,13 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.myshoppal.R
+import com.myshoppal.databinding.ActivityAddProductBinding
 import com.myshoppal.firestore.FirestoreClass
 import com.myshoppal.models.Product
 import com.myshoppal.utils.Constants
 import com.myshoppal.utils.GlideLoader
 import kotlinx.android.synthetic.main.activity_add_product.*
+
 import java.io.IOException
 
 /**
@@ -31,9 +33,11 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
     // A global variable for uploaded product image URL.
     private var mProductImageURL: String = ""
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_product)
+
 
         setupActionBar()
 

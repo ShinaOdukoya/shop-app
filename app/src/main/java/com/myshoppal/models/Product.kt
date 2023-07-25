@@ -1,7 +1,8 @@
 package com.myshoppal.models
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+//import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 /**
  * A data model class for Product with required fields.
